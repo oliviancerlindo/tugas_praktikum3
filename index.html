@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jejak Pengeluaran — Pelacak Pengeluaran</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <main class="page">
+    <header class="hero">
+      <h1>Jejak Pengeluaran</h1>
+    </header>
+
+    <section class="panels">
+      <form class="card form-card" id="expense-form" novalidate>
+        <h2>Tambah pengeluaran</h2>
+
+        <div class="field">
+          <label for="expense-name">Keterangan pengeluaran</label>
+          <input type="text" id="expense-name" name="expense-name" placeholder="Masukkan Keterangan" maxlength="60" autocomplete="off">
+        </div>
+
+          <div class="field">
+            <label for="expense-amount">Nominal (Rp)</label>
+            <input type="text" id="expense-amount" name="expense-amount" placeholder="50000" inputmode="numeric">
+          </div>
+
+        <p class="form-error" id="form-error" role="alert" aria-live="polite"></p>
+
+        <button type="submit" class="btn-primary">+ Tambah pengeluaran</button>
+      </form>
+    </section>
+
+    <form class="card form-card" id="expense-form" novalidate>
+      <h2>Jalur pengeluaran</h2>
+      <div class="table-wrap" id="table-wrap">
+        <table class="trail-table">
+          <thead>
+            <tr>
+              <th scope="col">Keterangan</th>
+              <th scope="col">Nominal</th>
+              <th scope="col" aria-hidden="true"></th>
+              
+            </tr>
+          </thead>
+          <tbody id="trail-body"></tbody>
+        </table>
+      </div>
+      <p class="empty-state" id="empty-state"># Jejak Pengeluaran Masih Kosong #</p>
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
